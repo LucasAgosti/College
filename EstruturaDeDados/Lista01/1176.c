@@ -1,10 +1,11 @@
 #include <stdio.h>
+#define SIZE 61
 
 long long int calcFib(int indice);
 
 int main(){
 
-	int T, indice;
+	int T = 0, indice = 0;
 	
 	scanf("%d" ,&T);
 	
@@ -18,10 +19,11 @@ int main(){
 
 long long int calcFib(int indice){
 
-	long long int fib[61];
+	int i;
+	long long int fib[SIZE];
 	    fib[0]=0;
 	    fib[1]=1;
-	    for(int i = 2; i < 61; i++){
+	    for(i = 2; i < SIZE; i++){
 		 fib[i] = fib[i - 1] + fib[i - 2];
 	    }
 	    
