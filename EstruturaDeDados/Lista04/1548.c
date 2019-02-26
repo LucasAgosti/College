@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-#define SIZE 1000
+#define SIZE 1001
 
 void imprimeArray(int arr[SIZE], int filaSize);
 void selectionSort(int arr[SIZE], int nAlunos);
-
 
 int main(){
 
@@ -21,8 +20,7 @@ int main(){
 			scanf("%d", &notas[i]);
 			posicaoInicial[i] = notas[i];
 		}
-
-		imprimeArray(notas, nAlunos);
+		
 		selectionSort(notas, nAlunos);
 
 		flag = 0;
@@ -32,18 +30,16 @@ int main(){
 			if(notas[i] != posicaoInicial[i])
 				flag++;	
 		}
-		imprimeArray(notas, nAlunos);
-		
 		printf("%d\n", flag);
 	}
-
-
 	return 0;
 }
 
 void imprimeArray(int arr[SIZE], int filaSize){
 
-	for(int i = 0; i < filaSize; i++)
+    int i;
+    
+	for(i = 0; i < filaSize; i++)
 		printf("|%d| ", arr[i]);
 	printf("\n");
 }
@@ -65,8 +61,7 @@ void selectionSort(int arr[SIZE], int nAlunos){
 			if(posicaoMenorValor != i){
 				aux = arr[i];
 				arr[i] = arr[posicaoMenorValor];
-				arr[posicaoMenorValor] = aux;
-			
+				arr[posicaoMenorValor] = aux;		
 			}
 		}
 	}
