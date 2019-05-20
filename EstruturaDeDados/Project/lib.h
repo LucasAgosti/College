@@ -18,18 +18,13 @@ node iniciaEstados(int nodo_inicial[9]){
     for(int i = 0; i < 9; i++){
         aux[i] = nodo_inicial[i];
     }
-    //int aux[9] = {1, 2, 0, 3, 4, 5, 6, 7, 8}; //Estado p exemplo
-    //int aux[9] = {1, 2, 3, 4, 0, 6, 5, 7, 8};
     
     for (int i = 0; i < 9; i++){
         a.estado[i] = aux[i];  
         arrVisitados[visited][i] = aux[i];  
     }
  	visited++;
-    //[8, 7, 6,
-    // 5, 4, 3,   
-    // 2, 1, 0]
-    //a.estado[0] = 0
+	
     a = generateTree(a);
     return a;
 }
